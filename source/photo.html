@@ -15,38 +15,36 @@
 
       <nav class="main-nav">
 
+        <ul  id="idMobileMenu" class="main-nav__list site-list" style="display: none;">
+          <li class="site-list__item">
 
-        <div class="main-nav__wrapper">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a>Фото и Видео</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a  href="https://htmlacademy.ru/intensive/adaptive">htmlacademy</a>
+          </li>
+        </ul>
 
-          <img class="logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="Закрыть меню">
+        <!--<div class="main-nav__wrapper">-->
+        <!--</div>-->
 
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a>Фото и Видео</a>
-            </li>
-
-            <li class="site-list__item">
-              <a href="form.html">Форма отзыва</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">htmlacademy</a>
-            </li>
-          </ul>
-
-        </div>
-      </nav>
-
-      <div>
-        <a class="page-header__logo">
+        <a href="index.html" class="page-header__logo">
+          <span class="logo-company"></span>
           <img class="page-header__logo-image" src="http://placehold.it/150x100" width="60" height="60" alt="Седона - Туристическое бюро">
         </a>
-        <button class="main-nav__toggle" type="button">
-          Открыть меню
-        </button>
-      </div>
+
+        <a href="javascript:void(0);" class="icon-menu" onclick="myMobileMenu()">
+          <span id="idIconMenu" style="background-color: green; padding: 10px;" class="three-line">
+            <img class="page-header__logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="Открыть меню/Закрыть меню">
+          </span>
+        </a>
+      </nav>
 
       <div>
         <img class="page-header__logo-image" src="http://placehold.it/150x100" width="200" height="60" alt="SEDONA">
@@ -54,95 +52,142 @@
       </div>
     </header>
 
-    <main class="page-main">
+    <main class="pageMain">
 
-      <h1 class="visually-hidden">«SEDONA» – Седона</h1>
-      <section>
+      <h1 class="visually-hidden">«SEDONA» – Седона -- страница Фото и Видео</h1>
 
-        <div>
-          <h3>Фото и видео</h3>
-          <p>
+      <section class="wrapperMain">
+
+        <header class="headerMain headerMain--mobile">
+          <h3 class="pageMain__title">Фото и видео</h3>
+          <p  class="pageMain__text">
             Не&nbsp;можете&nbsp;решиться&nbsp;на&nbsp;путешествие
             из-за&nbsp;курса?&nbsp;Фотографии&nbsp;помогут
             вам&nbsp;забыть&nbsp;о&nbsp;политике&nbsp;и&nbsp;экономике.
           </p>
-        </div>
+        </header>
 
-        <section>
-          <div>
-            <hr>
-            <figure>
-              <img class="page-header__logo-image" src="http://placehold.it/150x100" width="200" height="200" alt="Неродные просторы">
-            </figure>
-            <h6>Неродные просторы</h6>
-            <p>Автор фото: Борис</p>
-            <p>1350</p>
-          </div>
-          <div>
-            <hr>
-            <figure>
-              <img class="page-header__logo-image" src="http://placehold.it/150x100" width="200" height="200" alt="Местная растительность">
-            </figure>
-            <h6>Местная растительность</h6>
-            <p>Автор фото: Сергей</p>
-            <p>143</p>
-          </div>
-          <div>
-            <hr>
-            <figure>
-              <img class="page-header__logo-image" src="http://placehold.it/150x100" width="200" height="200" alt="Дорога на север">
-            </figure>
-            <h6>Дорога на север</h6>
-            <p>Автор фото: Петр</p>
-            <p>96</p>
-          </div>
-          <div>
-            <hr>
-            <figure>
-              <img class="page-header__logo-image" src="http://placehold.it/150x100" width="200" height="200" alt="Мост Дьявола">
-            </figure>
-            <h6>Мост Дьявола</h6>
-            <p>Автор фото: Антон</p>
-            <p>254</p>
-          </div>
-          <div>
-            <hr>
-            <h3>Все еще сомневаитесь?</h3>
-            <p>Смотрите видеопрезентацию и
-              скорее за билетами, пока они не подорожали в очередной раз!
-            </p>
-            <iframe width="240" height="180" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        <section class="fotoVideo">
+          <hr>
+          <figure class="fotoVideo__foto">
+            <img class="fotoVideo__image" src="http://placehold.it/150x100" width="200" height="200" alt="Неродные просторы">
+            <figcaption class="fotoVideo__fotoCaption">
+              <h6 class="fotoVideo__title">Неродные просторы</h6>
+              <p class="fotoVideo__autor">Автор фото: Борис</p>
+              <p class="fotoVideo__counter">1350</p>
+            </figcaption>
+          </figure>
+          <hr>
+          <figure class="fotoVideo__foto">
+            <img class="fotoVideo__image" src="http://placehold.it/150x100" width="200" height="200" alt="Местная растительность">
+            <figcaption class="fotoVideo__fotoCaption">
+              <h6 class="fotoVideo__title">Местная растительность</h6>
+              <p class="fotoVideo__autor">Автор фото: Сергей</p>
+              <p class="fotoVideo__counter">143</p>
+            </figcaption>
+          </figure>
+          <hr>
+          <figure class="fotoVideo__foto">
+            <img class="fotoVideo__image" src="http://placehold.it/150x100" width="200" height="200" alt="Дорога на север">
+            <figcaption class="fotoVideo__fotoCaption">
+              <h6 class="fotoVideo__title">Дорога на север</h6>
+              <p class="fotoVideo__autor">Автор фото: Петр</p>
+              <p class="fotoVideo__counter">96</p>
+            </figcaption>
+          </figure>
+          <hr>
+          <figure class="fotoVideo__foto">
+            <img class="fotoVideo__image" src="http://placehold.it/150x100" width="200" height="200" alt="Мост Дьявола">
+            <figcaption class="fotoVideo__fotoCaption">
+              <h6 class="fotoVideo__title">Мост Дьявола</h6>
+              <p class="fotoVideo__autor">Автор фото: Антон</p>
+              <p class="fotoVideo__counter">254</p>
+            </figcaption>
+          </figure>
 
-          </div>
+          <hr>
+          <section class="fotoVideo__video">
+            <figure id="videoContainer" data-fullscreen="false">
+              <figcaption class="fotoVideo__videoCaption">
+                <h3 class="advantages__title">Все еще сомневаитесь?</h3>
+                <p class="pageMain__text">Смотрите видеопрезентацию и
+                  скорее за билетами, пока они не подорожали в очередной раз!
+                </p>
+              </figcaption>
+              <!--<figure id="videoContainer" data-fullscreen="false">-->
+              <video width="320" height="240" controls poster="http://placehold.it/150x100">
+                  Your browser does not support the video tag.
+              </video>
+              <!--<iframe width="240" height="180" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>-->
+              <div id="video-controls" class="videoControls" data-state="hidden">
+                <button id="playpause" type="button" data-state="play">Play/Pause</button>
+                <button id="stop" type="button" data-state="stop">Stop</button>
+                <div class="videoProgress">
+                  <progress value="22" max="100">
+                    <span id="progress-bar"></span>
+                  </progress>
+                </div>
+                <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
+                <button id="volinc" type="button" data-state="volup">Vol+</button>
+                <button id="voldec" type="button" data-state="voldown">Vol-</button>
+                <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
+              </div>
+            </figure>
+          </section>
         </section>
 
       </section>
-
     </main>
 
-    <footer>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
 
-      <div>
-        <strong>#VisitSedona</strong>
-      </div>
+        <div class="page-footer__visitsedona visitsedona">
+          <p class="pageMain__titleBig">#VisitSedona</p>
+        </div>
 
-      <div class="SOCIALNET">
-        <span>
-          <img class="logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="(logo-twitter)">
-        </span>
-        <span>
-          <img class="logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="(logo-facebook)">
-        </span>
-        <span>
-          <img class="logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="(logo-Youtube)">
-        </span>
-      </div>
+        <div class="page-footer__socialnet socialnet">
+          <ul class="socialnet__list">
+            <li class="socialnet__item">
+              <a class="socialnet__link socialnet__link-twitter" href="https://www.twitter.com">
+                <img src="http://placehold.it/150x100" width="20" height="20" alt="Логотип twitter">
+              </a>
+            </li>
+            <li class="socialnet__item">
+              <a class="socialnet__link socialnet__link-facebook" href="https://www.facebook.com">
+                <img src="http://placehold.it/150x100" width="20" height="20" alt="Логотип facebook">
+              </a>
+            </li>
+            <li class="socialnet__item">
+              <a class="socialnet__link socialnet__link-youtube" href="https://www.youtube.com">
+                <img src="http://placehold.it/150x100" width="20" height="20" alt="Логотип youtube">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <span class="pageMain__text">Разработано</span>
+          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="Логотип разработчика">
+          </a>
+        </div>
 
-      <div>
-        Разработано
-        <img class="logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="(logo-htmlacademy)">
       </div>
     </footer>
 
+    <script>
+      function myMobileMenu() {
+        var x = document.getElementById("idMobileMenu");
+        var y = document.getElementById("idIconMenu");
+
+        if (x.style.display === "block") {
+          x.style.display = "none";
+          y.style.background = "green";
+        } else {
+          x.style.display = "block";
+          y.style.background = "red";
+        }
+      }
+    </script>
   </body>
 </html>

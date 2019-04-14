@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <!--<link rel="stylesheet/less" type="text/css" href="styles.less" />-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
   </head>
-
   <body>
 
     <header class="page-header">
@@ -17,38 +15,36 @@
 
       <nav class="main-nav">
 
+        <ul  id="idMobileMenu" class="main-nav__list site-list" style="display: none;">
+          <li class="site-list__item">
 
-        <div class="main-nav__wrapper">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="photo.html">Фото и Видео</a>
+          </li>
+          <li class="site-list__item">
+            <a>Форма отзыва</a>
+          </li>
+          <li class="site-list__item">
+            <a href="https://htmlacademy.ru/intensive/adaptive">htmlacademy</a>
+          </li>
+        </ul>
 
-          <img class="logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="Закрыть меню">
+        <!--<div class="main-nav__wrapper">-->
+        <!--</div>-->
 
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="photo.html">Фото и Видео</a>
-            </li>
-
-            <li class="site-list__item">
-              <a>Форма отзыва</a>
-            </li>
-            <li class="site-list__item">
-              <a href="#">htmlacademy</a>
-            </li>
-          </ul>
-
-        </div>
-      </nav>
-
-      <div>
-        <a class="page-header__logo">
+        <a href="index.html" class="page-header__logo">
+          <span class="logo-company"></span>
           <img class="page-header__logo-image" src="http://placehold.it/150x100" width="60" height="60" alt="Седона - Туристическое бюро">
         </a>
-        <button class="main-nav__toggle" type="button">
-          Открыть меню
-        </button>
-      </div>
+
+        <a href="javascript:void(0);" class="icon-menu" onclick="myMobileMenu()">
+          <span id="idIconMenu" style="background-color: green; padding: 10px;" class="three-line">
+            <img class="page-header__logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="Открыть меню/Закрыть меню">
+          </span>
+        </a>
+      </nav>
 
       <div>
         <img class="page-header__logo-image" src="http://placehold.it/150x100" width="200" height="60" alt="SEDONA">
@@ -56,45 +52,45 @@
       </div>
     </header>
 
-    <main class="page-main">
+    <main class="pageMain">
 
-      <h1 class="visually-hidden">«SEDONA» – Седона</h1>
+      <h1 class="visually-hidden">«SEDONA» – Седона -- Форма отзыва</h1>
 
-      <section>
+      <section class="wrapperMain">
 
-        <div>
-          <h3>Оставьте свой отзыв</h3>
-          <p>
+        <header class="headerMain headerMain--mobile">
+          <h3 class="pageMain__title">Оставьте свой отзыв</h3>
+          <p  class="pageMain__text">
             Поиогите&nbsp;нашим&nbsp;отелям&nbsp;стать&nbsp;лучше!
             Оставьте отзыв о них, а также о посещенных вами достопримечательностях
           </p>
-        </div>
+        </header>
 
         <hr>
 
         <form method="get" action="https://echo.htmlacademy.ru">
              
           <fieldset>
-            <legend>Представьтесь:</legend>
-            <p><label>Имя:     <input type="text" placeholder="Петр"></label></p>
-            <p><label>Фамилия: <input type="text" placeholder="Иванов"></label></p>
-            <p><label>Отчество:<input type="text" placeholder="Александрович"></label></p>
+            <legend class="pageMain__title">Представьтесь:</legend>
+            <p><label class="pageMain__text">Имя:     <input type="text" placeholder="Петр"></label></p>
+            <p><label class="pageMain__text">Фамилия: <input type="text" placeholder="Иванов"></label></p>
+            <p><label class="pageMain__text">Отчество:<input type="text" placeholder="Александрович"></label></p>
           </fieldset>
 
           <fieldset>
-            <legend>Контактная информация:</legend>
-            <label for="id-phone">Контактный телефон:</label><br>
+            <legend class="pageMain__title">Контактная информация:</legend>
+            <label class="pageMain__text" for="id-phone">Контактный телефон:</label><br>
             <input type="text" id="id-phone" placeholder="Введите телефон">
             <img class="logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="телефон">
             <br>
-            <label for="id-email">Электронная почта:</label><br>
+            <label class="pageMain__text" for="id-email">Электронная почта:</label><br>
             <input type="text" id="id-email" placeholder="Введите e-mail">
             <img class="logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="e-mail">
             <br>
           </fieldset>
 
           <fieldset>
-            <legend>Ваше общее впечатление:</legend>
+            <legend class="pageMain__title">Ваше общее впечатление:</legend>
             <p><input type="radio" name="YourOverallImpression" value="RatherPositive" checked>Скорее положительное</p>
             <p><input type="radio" name="YourOverallImpression" value="RatherNegative">Скорее отрицательное</p>
             <p><input type="radio" name="YourOverallImpression" value="DifficultToAnswer">Затрудняюсь ответить</p>
@@ -102,7 +98,7 @@
           </fieldset>
 
           <fieldset>
-            <legend>Посещенные достопримечательности:</legend>
+            <legend class="pageMain__title">Посещенные достопримечательности:</legend>
             <p><input type="checkbox" name="visitedPlace" value="DevilsBridge" checked>Мост Дьявола</p>
             <p><input type="checkbox" name="visitedPlace" value="MountBell" checked>Гора Колокол</p>
             <p><input type="checkbox" name="visitedPlace" value="SlidePark" checked>Слайд-парк</p>
@@ -110,39 +106,64 @@
           </fieldset>
 
           <fieldset>
-            <legend>Опишите свои эмоции:</legend>
+            <legend class="pageMain__title">Опишите свои эмоции:</legend>
             <textarea rows="6" cols="50" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
 
           <button type="submit">Отправить отзыв</button>
         </form>
       </section>
-
     </main>
 
-    <footer>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
 
-      <div>
-        <strong>#VisitSedona</strong>
-      </div>
+        <div class="page-footer__visitsedona visitsedona">
+          <p class="pageMain__titleBig">#VisitSedona</p>
+        </div>
 
-      <div class="SOCIALNET">
-        <span>
-          <img class="logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="(logo-twitter)">
-        </span>
-        <span>
-          <img class="logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="(logo-facebook)">
-        </span>
-        <span>
-          <img class="logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="(logo-Youtube)">
-        </span>
-      </div>
+        <div class="page-footer__socialnet socialnet">
+          <ul class="socialnet__list">
+            <li class="socialnet__item">
+              <a class="socialnet__link socialnet__link-twitter" href="https://www.twitter.com">
+                <img src="http://placehold.it/150x100" width="20" height="20" alt="Логотип twitter">
+              </a>
+            </li>
+            <li class="socialnet__item">
+              <a class="socialnet__link socialnet__link-facebook" href="https://www.facebook.com">
+                <img src="http://placehold.it/150x100" width="20" height="20" alt="Логотип facebook">
+              </a>
+            </li>
+            <li class="socialnet__item">
+              <a class="socialnet__link socialnet__link-youtube" href="https://www.youtube.com">
+                <img src="http://placehold.it/150x100" width="20" height="20" alt="Логотип youtube">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <span class="pageMain__text">Разработано</span>
+          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <img class="logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="Логотип разработчика">
+          </a>
+        </div>
 
-      <div>
-        Разработано
-        <img class="logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="(logo-htmlacademy)">
       </div>
     </footer>
 
+    <script>
+      function myMobileMenu() {
+        var x = document.getElementById("idMobileMenu");
+        var y = document.getElementById("idIconMenu");
+
+        if (x.style.display === "block") {
+          x.style.display = "none";
+          y.style.background = "green";
+        } else {
+          x.style.display = "block";
+          y.style.background = "red";
+        }
+      }
+    </script>
   </body>
 </html>

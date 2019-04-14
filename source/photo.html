@@ -39,11 +39,9 @@
           <img class="page-header__logo-image" src="http://placehold.it/150x100" width="60" height="60" alt="Седона - Туристическое бюро">
         </a>
 
-        <a href="javascript:void(0);" class="icon-menu" onclick="myMobileMenu()">
-          <span id="idIconMenu" style="background-color: green; padding: 10px;" class="three-line">
-            <img class="page-header__logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="Открыть меню/Закрыть меню">
-          </span>
-        </a>
+        <button class="main-nav__toggle" id="idIconMenu" onclick="myMobileMenu()">
+          <img class="page-header__logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="Открыть меню/Закрыть меню">
+        </button>
       </nav>
 
       <div>
@@ -59,8 +57,8 @@
       <section class="wrapperMain">
 
         <header class="headerMain headerMain--mobile">
-          <h3 class="pageMain__title">Фото и видео</h3>
-          <p  class="pageMain__text">
+          <h3 class="pageTitle">Фото и видео</h3>
+          <p  class="pageText">
             Не&nbsp;можете&nbsp;решиться&nbsp;на&nbsp;путешествие
             из-за&nbsp;курса?&nbsp;Фотографии&nbsp;помогут
             вам&nbsp;забыть&nbsp;о&nbsp;политике&nbsp;и&nbsp;экономике.
@@ -110,7 +108,7 @@
             <figure id="videoContainer" data-fullscreen="false">
               <figcaption class="fotoVideo__videoCaption">
                 <h3 class="advantages__title">Все еще сомневаитесь?</h3>
-                <p class="pageMain__text">Смотрите видеопрезентацию и
+                <p class="pageText">Смотрите видеопрезентацию и
                   скорее за билетами, пока они не подорожали в очередной раз!
                 </p>
               </figcaption>
@@ -143,7 +141,7 @@
       <div class="page-footer__wrapper">
 
         <div class="page-footer__visitsedona visitsedona">
-          <p class="pageMain__titleBig">#VisitSedona</p>
+          <p class="pageTitleBig">#VisitSedona</p>
         </div>
 
         <div class="page-footer__socialnet socialnet">
@@ -166,7 +164,7 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <span class="pageMain__text">Разработано</span>
+          <span class="pageText">Разработано</span>
           <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <img class="logo-image" src="http://placehold.it/150x100" width="20" height="20" alt="Логотип разработчика">
           </a>
@@ -175,19 +173,8 @@
       </div>
     </footer>
 
-    <script>
-      function myMobileMenu() {
-        var x = document.getElementById("idMobileMenu");
-        var y = document.getElementById("idIconMenu");
+    <script src="js/script.js"></script>
+    <noscript>ВНИМАНИЕ! Ваш браузер не поддерживает JavaScript.</noscript>
 
-        if (x.style.display === "block") {
-          x.style.display = "none";
-          y.style.background = "green";
-        } else {
-          x.style.display = "block";
-          y.style.background = "red";
-        }
-      }
-    </script>
   </body>
 </html>

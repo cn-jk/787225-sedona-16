@@ -87,7 +87,7 @@
 .pageTitle {
   padding: 0;
   margin: 0;
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
@@ -96,7 +96,7 @@
 .pageText {
   padding: 0;
   margin: 0;
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-weight: 400;
   text-transform: uppercase;
   line-height: 1.7;
@@ -269,7 +269,7 @@
   height: 115px;
   text-align: center;
   padding: 30px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
 }
 .triangle {
   background-color: #81b3d2;
@@ -425,76 +425,6 @@
   width: 320px;
   text-align: center;
   /*background-image: url("../img/icon-like.svg")*/
-  /*
-
-    &__fotoCaption {
-      width: 280px;
-      height: 70px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    &__title {
-      padding: 0;
-      margin: 0;
-
-      font-family: 'PT Sans';
-      font-weight: 700;
-      font-size: 14px;
-      text-transform: uppercase;
-      line-height: 1.4;
-    }
-
-    &__text {
-      padding: 0;
-      margin: 0;
-
-      font-family: 'PT Sans';
-      font-weight: 400;
-      font-size: 14px;
-      text-transform: uppercase;
-      line-height: 1.4;
-    }
-
-    &__before-text::before {
-      padding: 0;
-      margin: 0;
-
-      font-family: 'PT Sans';
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 1.4;
-      content: "Автор фото: ";
-      background-color: transparent;
-      color: inherit;
-    }
-
-    &__before-icon::before {
-      padding: 0 15px 0 0;
-      margin: 0;
-      content: url('../img/icon-like.svg');
-      background-color: transparent;
-      opacity: 0.4;
-    }
-
-    &__video {
-      background-color: transparent;
-    }
-
-    &__videoFigure {
-      padding: 0;
-      margin: 0;
-    }
-
-    &__videoCaption {
-      text-align: center;
-      width: 240px;
-      height: 125px;
-      margin: 0 auto;
-      margin-top: 30px;
-      margin-bottom: 40px;
-    }*/
 }
 .formFeedBack__flex {
   padding: 0;
@@ -567,48 +497,6 @@
   padding: 0;
   margin: 0;
   border: none;
-  /*
-    &__flex {
-      padding: 0;
-      margin: 0 auto;
-      width: 280px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-
-    &__whoareyou-2 {
-      padding: 0;
-      margin: 0 auto;
-      width: 280px;
-      height: 170px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-      overflow: hidden;
-    }
-
-
-    &__p {
-      padding: 0;
-      margin:  0;
-      margin: 20px 0;
-      background-color: transparent;
-      color: black;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    &__hr {
-      padding: 0;
-      margin: 20px 0;
-      background-color: transparent;
-      color: black;
-      opacity: 0.4;
-    }*/
 }
 .whoAreYou__legend {
   padding: 0;
@@ -649,7 +537,7 @@
   margin: 0;
   color: black;
   /*background-color: #f2f2f2;*/
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-weight: 700;
   font-size: 18px;
   height: 45px;
@@ -678,7 +566,7 @@
   margin: 0;
   color: black;
   /*background-color: #f2f2f2;*/
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-weight: 700;
   font-size: 18px;
   height: 45px;
@@ -716,7 +604,7 @@
 }
 .contactInformation__img {
   padding: 20px;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 .describeYourEmotions {
   padding: 0;
@@ -749,7 +637,7 @@
 }
 .describeYourEmotions__img {
   padding: 20px;
-  background-color: #ccc;
+  background-color: #cccccc;
 }
 .fotoVideo {
   color: black;
@@ -799,7 +687,7 @@
 .fotoVideo__title {
   padding: 0;
   margin: 0;
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
@@ -808,7 +696,7 @@
 .fotoVideo__text {
   padding: 0;
   margin: 0;
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-weight: 400;
   font-size: 14px;
   /*text-transform: uppercase;*/
@@ -817,7 +705,7 @@
 .fotoVideo__before-text::before {
   padding: 0;
   margin: 0;
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
@@ -850,7 +738,7 @@
 .inputText {
   color: black;
   background-color: #f2f2f2;
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-weight: 700;
   font-size: 18px;
   height: 60px;
@@ -860,7 +748,7 @@
 .inputText-2 {
   color: black;
   /*background-color: #f2f2f2;*/
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-weight: 700;
   font-size: 18px;
   height: 46px;
@@ -882,7 +770,7 @@
 .pageTitleBig {
   padding: 0;
   /*  margin: 0;*/
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-weight: 700;
   font-size: 21px;
   text-transform: uppercase;
@@ -945,8 +833,8 @@
   padding: 0;
   list-style: none;
   text-align: center;
-  -webkit-box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
-          box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.24);
+          box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.24);
 }
 .site-list__item {
   display: -webkit-box;
@@ -978,7 +866,7 @@
   background-color: transparent;
   color: white;
   text-decoration: none;
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1058,13 +946,13 @@ body {
   width: 320px;
 }
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   src: url('../fonts/ptsans.woff2') format('woff2'), url('../fonts/ptsans.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   src: url('../fonts/ptsansbold.woff2') format('woff2'), url('../fonts/ptsansbold.woff') format('woff');
   font-weight: 700;
   font-style: normal;

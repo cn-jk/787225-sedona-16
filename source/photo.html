@@ -12,9 +12,9 @@
       <ul class="page-header__list site-list">
 
         <li class="site-list__item site-list__itemtoggle">
-          <button class="page-header__toggle" disabled></button>
+          <button class="buttonToggle" disabled></button>
           <a class="site-list__href" href="index.html">Главная</a>
-          <button class="page-header__toggle icon-cross" onclick="myMobileMenu('Cross')"></button>
+          <button class="buttonToggle buttonToggle__icon_cross" onclick="myMobileMenu('cross')"></button>
         </li>
 
         <li class="site-list__item">
@@ -28,18 +28,17 @@
         </li>
       </ul>
 
-      <div class="header-div header-div__2background-image">
+      <div class="header-div header-div_2background-image">
         <h1 class="visually-hidden">City of Sedona</h1>
 
         <nav class="page-header__nav">
-          <button class="page-header__toggle" disabled></button>
+          <button class="buttonToggle" disabled></button>
           <a      class="header-div__logo logo-company" href="index.html"></a>
-          <button class="page-header__toggle icon-threeLines" onclick="myMobileMenu('threeLines')"></button>
+          <button class="buttonToggle buttonToggle__icon_threeLines" onclick="myMobileMenu('threeLines')"></button>
         </nav>
       </div>
 
-      <!--</div>-->
-    </header>
+    </header>      <!--</div>-->
 
 
 
@@ -51,7 +50,8 @@
       <header class="headerMain-photo headerMain__mobile"
       -->
 
-      <header class="headerMain-photo headerMain__mobile">
+      <header class="headerMain headerMain_mobile headerMain_photo-page">
+        <!--<header class="headerMain-photo headerMain__mobile">-->
         <h3 class="pageTitle">Фото и видео</h3>
         <p  class="pageText">
           Не&nbsp;можете&nbsp;решиться&nbsp;на&nbsp;путешествие
@@ -60,82 +60,77 @@
         </p>
       </header>
 
-      <hr class="fotoVideo__hr">
+      <hr class="hr-line">
 
       <section class="fotoVideo">
 
-        <figure class="fotoVideo__foto">
+        <figure class="fotoVideo__foto foto">
           <img src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
-          <figcaption class="fotoVideo__fotoCaption">
-            <h6 class="fotoVideo__title">Неродные просторы</h6>
-            <p class="fotoVideo__text fotoVideo__before-text">Борис</p>
-            <p class="fotoVideo__title fotoVideo__before-icon">1350</p>
+          <figcaption class="foto__caption">
+            <h6 class="foto__text_title">Неродные просторы</h6>
+            <p  class="foto__text        foto__author">Борис</p>
+            <p  class="foto__text_title  foto__like-counter">1350</p>
           </figcaption>
         </figure>
 
-        <hr class="fotoVideo__hr">
+        <hr class="hr-line">
 
-        <figure class="fotoVideo__foto">
+        <figure class="fotoVideo__foto foto">
           <img src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность">
-          <figcaption class="fotoVideo__fotoCaption">
-            <h6 class="fotoVideo__title">Местная растительность</h6>
-            <p class="fotoVideo__text fotoVideo__before-text">Сергей</p>
-            <p class="fotoVideo__title fotoVideo__before-icon">143</p>
+          <figcaption class="foto__caption">
+            <h6 class="foto__text_title">Местная растительность</h6>
+            <p  class="foto__text        foto__author">Сергей</p>
+            <p  class="foto__text_title  foto__like-counter">143</p>
           </figcaption>
         </figure>
 
-        <hr class="fotoVideo__hr">
+        <hr class="hr-line">
 
-        <figure class="fotoVideo__foto">
+        <figure class="fotoVideo__foto foto">
           <img src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
-          <figcaption class="fotoVideo__fotoCaption">
-            <h6 class="fotoVideo__title">Дорога на север</h6>
-            <p class="fotoVideo__text fotoVideo__before-text">Петр</p>
-            <p class="fotoVideo__title fotoVideo__before-icon">96</p>
+          <figcaption class="foto__caption">
+            <h6 class="foto__text_title">Дорога на север</h6>
+            <p  class="foto__text        foto__author">Петр</p>
+            <p  class="foto__text_title  foto__like-counter">96</p>
           </figcaption>
         </figure>
 
-        <hr class="fotoVideo__hr">
+        <hr class="hr-line">
 
-        <figure class="fotoVideo__foto">
+        <figure class="fotoVideo__foto foto">
           <img src="img/main-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост Дьявола">
-          <figcaption class="fotoVideo__fotoCaption">
-            <h6 class="fotoVideo__title">Мост Дьявола</h6>
-            <p class="fotoVideo__text fotoVideo__before-text">Антон</p>
-            <p class="fotoVideo__title fotoVideo__before-icon">254</p>
+          <figcaption class="foto__caption">
+            <h6 class="foto__text_title">Мост Дьявола</h6>
+            <p  class="foto__text        foto__author">Антон</p>
+            <p  class="foto__text_title  foto__like-counter">254</p>
           </figcaption>
         </figure>
 
-        <hr class="fotoVideo__hr">
+        <hr class="hr-line">
 
-        <section class="fotoVideo__video">
-          <figure class="fotoVideo__videoFigure" id="videoContainer" data-fullscreen="false">
-            <figcaption class="fotoVideo__videoCaption headerMain__mobile">
-              <h3 class="pageTitle">Все еще сомневаитесь?</h3>
-              <p class="pageText">
-                Смотрите&nbsp;видеопрезентацию и скорее за билетами,
-                пока они не подорожали в очередной раз!
-              </p>
-            </figcaption>
+        <figure class="fotoVideo__video video" id="videoContainer" data-fullscreen="false">
 
-            <!--<figure id="videoContainer" data-fullscreen="false">-->
-            <video width="320" height="201" controls poster="img/video-mobile@1x.jpg">Your browser does not support the video tag.</video>
-            <!--<iframe width="240" height="180" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>-->
-            <div id="video-controls" class="videoControls" data-state="hidden">
-              <button id="playpause" type="button" data-state="play">Play/Pause</button>
-              <button id="stop" type="button" data-state="stop">Stop</button>
-              <div class="videoProgress">
-                <progress value="22" max="100">
-                  <span id="progress-bar"></span>
-                </progress>
-              </div>
-              <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
-              <!--<button id="volinc" type="button" data-state="volup">Vol+</button>-->
-              <!--<button id="voldec" type="button" data-state="voldown">Vol-</button>-->
-              <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button>
-            </div>
-          </figure>
-        </section>
+          <figcaption class="video__caption">
+            <h3 class="video__text_title">Все еще сомневаитесь?</h3>
+            <p  class="video__text">
+              Смотрите&nbsp;видеопрезентацию и скорее за билетами,
+              пока они не подорожали в очередной раз!
+            </p>
+          </figcaption>
+
+          <img src="img/video-mobile@1x.jpg" width="320" height="201" alt="Your browser does not support the video tag.">
+
+          <div class="video__progress">
+            <div class="video__line-progress"></div>
+            <div class="video__marker-progress"></div>
+          </div>
+
+          <div class="video__controls">
+            <button class="video__button video__button_replay"></button>
+            <button class="video__button video__button_subtitles"></button>
+            <button class="video__button video__button_fullscreen"></button>
+          </div>
+        </figure>
       </section>
 
       <!--</section>-->

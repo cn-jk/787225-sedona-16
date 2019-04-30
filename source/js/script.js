@@ -2,7 +2,7 @@ function myMobileMenu(iconName) {
 
   var x = document.getElementById("idHeader");
   var selectorName = "page-header__list";
-  var keyWord = "Cross";
+  var keyWord = "cross";
 
   x.getElementsByClassName(selectorName)[0].style.display = "block";
 

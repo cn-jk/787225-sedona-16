@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!--<link rel="preload" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" as="style">-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
   </head>
   <body>
@@ -12,9 +13,9 @@
       <ul class="page-header__list site-list">
 
         <li class="site-list__item site-list__itemtoggle">
-          <button class="page-header__toggle" disabled></button>
+          <button class="buttonToggle" disabled></button>
           <a class="site-list__href">Главная</a>
-          <button class="page-header__toggle icon-cross" onclick="myMobileMenu('Cross')"></button>
+          <button class="buttonToggle buttonToggle__icon_cross" onclick="myMobileMenu('cross')"></button>
         </li>
 
         <li class="site-list__item">
@@ -28,13 +29,13 @@
         </li>
       </ul>
 
-      <div class="header-div header-div__1background-image">
+      <div class="header-div header-div_1background-image">
         <h1 class="visually-hidden">City of Sedona</h1>
 
         <nav class="page-header__nav">
-          <button class="page-header__toggle" disabled></button>
+          <button class="buttonToggle" disabled></button>
           <a      class="header-div__logo logo-company"></a>
-          <button class="page-header__toggle icon-threeLines" onclick="myMobileMenu('threeLines')"></button>
+          <button class="buttonToggle buttonToggle__icon_threeLines" onclick="myMobileMenu('threeLines')"></button>
         </nav>
       </div>
 
@@ -47,7 +48,7 @@
       <h1 class="visually-hidden">«SEDONA» – Седона -- страница Главная</h1>
 
 
-      <header class="headerMain headerMain__mobile">
+      <header class="headerMain headerMain_mobile">
         <h3 class="pageTitle headerMain__h3">Седона&nbsp;-&nbsp;небольшой городок&nbsp;в&nbsp;Аризоне, заслуживающий&nbsp;большего!</h3>
         <p  class="pageText  headerMain__p">Рассмотрим&nbsp;5&nbsp;причин,&nbsp;по&nbsp;которым Седона&nbsp;круче,&nbsp;чем&nbsp;Гранд&nbsp;Каньон!</p>
       </header>
@@ -59,7 +60,8 @@
         <article class="WelcomeToCity__articles article">     <!--article__wrapper--left or --right-->
           <div class="article__div article__vertical">
             <h4 class="pageTitle">Настоящий городок</h4>
-            <p  class="pageText">--№1--</p>
+            <p  class="pageText WelcomeToCity__number">№1</p>
+            <!--<p  class="pageText WelcomeToCity__before-defise WelcomeToCity__after-defise">№1</p>-->
             <p  class="pageText">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
           <img src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Настоящий городок">
@@ -70,7 +72,7 @@
       <section class="WelcomeToCity__advantages advantage">
         <ul class="advantage__list-vertical">
           <li class="advantage__item-vertical">
-            <img src="img/icon-house.svg" width="37" height="36" alt="Жилье Логотип">
+            <div class="advantage__icon advantage__icon_house"></div>
             <div class="advantage__div-vertical">
               <h6  class="pageTitle" style="margin-bottom: 10px;">Жилье</h6>
               <p   class="pageText">рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -78,7 +80,7 @@
           </li>
 
           <li class="advantage__item-vertical">
-            <img src="img/icon-gift.svg" width="37" height="36" alt="Сувениры Логотип">
+            <div class="advantage__icon advantage__icon_gift"></div>
             <div class="advantage__div-vertical">
               <h6 class="pageTitle" style="margin-bottom: 10px;">Сувениры</h6>
               <p class="pageText">не только китайского, но и местного производства!</p>
@@ -86,7 +88,7 @@
           </li>
 
           <li class="advantage__item-vertical">
-            <img src="img/icon-burger.svg" width="37" height="36" alt="Еда Логотип">
+            <div class="advantage__icon advantage__icon_burger"></div>
             <div class="advantage__div-vertical">
               <h6 class="pageTitle" style="margin-bottom: 10px;">Еда</h6>
               <p class="pageText">всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
@@ -99,7 +101,7 @@
       <article class="WelcomeToCity__articles article">
         <div class="article__div article__vertical">  <!--article__wrapper--left or --right-->
           <h4 class="pageTitle">Там есть Мост Дьявола</h4>
-          <p  class="pageText">--№2--</p>
+          <p  class="pageText WelcomeToCity__number">№2</p>
           <p  class="pageText">Да, по нему можно пройти если вы осмелитесь, конечно</p>
         </div>
         <img src="img/photo-bridge-mobile@1x.jpg" width="320" height="260" alt="Мост Дьявола">
@@ -109,20 +111,20 @@
         <ul class="WelcomeToCity__list">
           <li class="WelcomeToCity__item">
             <h4 class="pageTitle">Небольшая площадь</h4>
-            <p class="pageText"  >--№3--</p>
-            <p  class="pageText" >Все интересные места находятся очень близко</p>
+            <p class="pageText WelcomeToCity__number">№3</p>
+            <p class="pageText" >Все интересные места находятся очень близко</p>
           </li>
 
           <li class="WelcomeToCity__item">
             <h4 class="pageTitle">Красивая дорога</h4>
-            <p class="pageText">--№4--</p>
-            <p  class="pageText">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p class="pageText WelcomeToCity__number">№4</p>
+            <p class="pageText">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
 
           <li class="WelcomeToCity__item">
             <h4 class="pageTitle">Мало туристов</h4>
-            <p class="pageText">--№5--</p>
-            <p  class="pageText">Большинство едет в Гранд Каньон и толпится там</p>
+            <p class="pageText WelcomeToCity__number">№5</p>
+            <p class="pageText">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ul>
       </section>

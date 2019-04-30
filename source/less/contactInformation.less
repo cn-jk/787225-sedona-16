@@ -3,33 +3,57 @@
   margin: 0;
   border: none;
   box-sizing: border-box;
+}
 
-  &__legend {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 5px;
-  }
+.contactInformation__legend {
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
 
-  &__div {
-    height: 90px;
-    margin-top: 15px;
-    overflow: hidden;
-  }
+.contactInformation__div {
+  height: 90px;
+  margin-top: 15px;
+  overflow: hidden;
+}
 
-  &__label {
-    margin-right: 20px;
-    text-align: left;
-    margin-left: 20px;
-    margin-bottom: -10px;
-  }
+.contactInformation__p {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  &__input {
-    flex-grow: 2;
-  }
+.contactInformation__label {
+  margin-right: 20px;
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: -10px;
+}
 
-  &__img {
-    padding: 20px;
-    background-color: #cccccc;
-  }
+.contactInformation__input {
+  flex-grow: 2;
+  box-sizing: border-box;
+}
 
+.contactInformation__icon {
+  padding: 20px;
+  margin: 0;
+  background-color: #cccccc;
+  box-sizing: border-box;
+  min-width: 60px;
+  min-height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+
+.contactInformation__icon_tel {
+  background-image: url("../img/icon-phone.svg");
+}
+.contactInformation__icon_email {
+  background-image: url("../img/icon-mail.svg");
 }

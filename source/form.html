@@ -12,9 +12,9 @@
       <ul class="page-header__list site-list">
 
         <li class="site-list__item site-list__itemtoggle">
-          <button class="page-header__toggle" disabled></button>
+          <button class="buttonToggle" disabled></button>
           <a class="site-list__href" href="index.html">Главная</a>
-          <button class="page-header__toggle icon-cross" onclick="myMobileMenu('Cross')"></button>
+          <button class="buttonToggle buttonToggle__icon_cross" onclick="myMobileMenu('cross')"></button>
         </li>
 
         <li class="site-list__item">
@@ -28,13 +28,13 @@
         </li>
       </ul>
 
-      <div class="header-div header-div__2background-image">
+      <div class="header-div header-div_2background-image">
         <h1 class="visually-hidden">City of Sedona</h1>
 
         <nav class="page-header__nav">
-          <button class="page-header__toggle" disabled></button>
+          <button class="buttonToggle" disabled></button>
           <a      class="header-div__logo logo-company" href="index.html"></a>
-          <button class="page-header__toggle icon-threeLines" onclick="myMobileMenu('threeLines')"></button>
+          <button class="buttonToggle buttonToggle__icon_threeLines" onclick="myMobileMenu('threeLines')"></button>
         </nav>
       </div>
 
@@ -48,7 +48,8 @@
 
       <!--<section class="wrapperMain">-->
 
-      <header class="headerMain-form headerMain__mobile">
+      <header class="headerMain headerMain_mobile headerMain_form-page">
+        <!--<header class="headerMain-form-photo headerMain_mobile">-->
         <h3 class="pageTitle">Оставьте свой отзыв</h3>
         <p  class="pageText">
           Поиогите&nbsp;нашим&nbsp;отелям&nbsp;стать&nbsp;лучше!
@@ -56,52 +57,52 @@
         </p>
       </header>
 
-      <hr class="fotoVideo__hr">
+      <hr class="hr-line">
 
       <form class="formFeedBack" method="get" action="https://echo.htmlacademy.ru">
 
         <fieldset class="whoAreYou">
           <legend class="pageTitle whoAreYou__legend">Представьтесь:</legend>
           <div class="formFeedBack__flex whoAreYou__div">
-            <p class="formFeedBack__p">
+            <p class="whoAreYou__p">
               <label class="pageText whoAreYou__label" for="idname">Имя:</label>
               <input class="inputText whoAreYou__grow" id="idname" type="text" name="nmName" placeholder="Петр">
             </p>
-            <p class="formFeedBack__p">
+            <p class="whoAreYou__p">
               <label class="pageText whoAreYou__label" for="idFaml">Фамилия:</label>
               <input class="inputText" id="idFaml" type="text" name="nmFaml" placeholder="Иванов">
             </p>
-            <p class="formFeedBack__p">
+            <p class="whoAreYou__p">
               <label class="pageText whoAreYou__label" for="idOtch">Отчество:</label>
               <input class="inputText" id="idOtch" type="text" name="nmOtch" placeholder="Александрович">
             </p>
           </div>
         </fieldset>
 
-        <hr class="fotoVideo__hr">
+        <hr class="hr-line">
 
         <fieldset class="contactInformation">
           <legend class="pageTitle contactInformation__legend">Контактная информация:</legend>
 
           <div class="formFeedBack__flex contactInformation__div">
             <label  class="pageText contactInformation__label" for="id-phone">Контактный телефон*:</label>
-            <p class="formFeedBack__p">
-              <input class="inputText contactInformation__input" type="text" id="id-phone" name="nmPhone" placeholder="Введите телефон">
-              <img class="logo-image contactInformation__img" src="img/icon-phone.svg" width="20" height="20" alt="телефон">
+            <p class="contactInformation__p">
+              <input class="inputText contactInformation__input" type="tel" id="id-phone" name="nmPhone" placeholder="Введите телефон">
+              <span class="contactInformation__icon contactInformation__icon_tel"></span>
             </p>
           </div>
 
           <div class="formFeedBack__flex contactInformation__div">
             <label class="pageText contactInformation__label" for="id-email">Электронная почта*:</label>
-            <p class="formFeedBack__p">
-              <input class="inputText contactInformation__input" type="text" id="id-email" name="nmEmail" placeholder="Введите e-mail">
-              <img class="logo-image contactInformation__img" src="img/icon-mail.svg" width="20" height="20" alt="e-mail">
+            <p class="contactInformation__p">
+              <input class="inputText contactInformation__input" type="email" id="id-email" name="nmEmail" placeholder="Введите e-mail">
+              <span class="contactInformation__icon contactInformation__icon_email"></span>
             </p>
           </div>
 
         </fieldset>
 
-        <hr class="fotoVideo__hr">
+        <hr class="hr-line">
 
         <fieldset class="yourOverallImpression">
           <legend class="pageTitle yourOverallImpression__legend">Ваше общее впечатление:</legend>
@@ -121,7 +122,7 @@
           </div>
         </fieldset>
 
-        <hr class="fotoVideo__hr">
+        <hr class="hr-line">
 
         <fieldset class="visitedAttractions">
           <legend class="pageTitle visitedAttractions__legend">Посещенные достопримечательности:</legend>
@@ -145,7 +146,7 @@
           </div>
         </fieldset>
 
-        <hr class="fotoVideo__hr">
+        <hr class="hr-line">
 
         <fieldset class="describeYourEmotions">
           <legend class="pageTitle describeYourEmotions__legend">Опишите свои эмоции:</legend>

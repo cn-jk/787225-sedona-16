@@ -1,0 +1,103 @@
+/* ---- */
+.page-footer {
+  padding: 0;
+  margin: 0 auto;
+  width: @mobile-width;
+  height: auto;
+  background-color: white;
+}
+@media (min-width: @tablet-width) {
+  .page-footer {
+    padding: 0;
+    margin: 0 auto;
+    padding-bottom: 35px;
+
+    width: @tablet-width;
+    height: auto;
+    background-color: white;
+  }
+}
+@media (min-width: @desktop-width) {
+  .page-footer {
+    padding: 0;
+    margin: 0 auto;
+    padding-bottom: 35px;
+
+    width: @desktop-width;
+    height: auto;
+    background-color: white;
+  }
+}
+
+.page-footer__wrapper {
+  padding: 0;
+  padding-bottom: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  width: 280px;
+  height: 204px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    padding: 0;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+
+    width: 650px;
+    height: 48px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    padding: 0;
+    margin: 0 auto;
+
+    width: 960px;
+    height: 48px;
+  }
+}
+/* ---- */
+.page-footer__visitsedona {
+  padding: 0;
+  margin: 0;
+
+  color: black;
+  background-color: transparent;
+
+  font-family: "PT Sans";
+  font-weight: 700;
+  font-size: 21px;
+  text-transform: uppercase;
+  line-height: 0.9;
+}
+
+.page-footer__socialnet {
+  padding: 0;
+  margin: 0;
+
+  width: 155px;
+  height: 48px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-footer__copyright {
+  color: black;
+  background-color: transparent;
+  min-height: 34px;
+  min-width: 125px;
+}

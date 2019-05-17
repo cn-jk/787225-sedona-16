@@ -1,0 +1,174 @@
+.WelcomeToCity {
+  padding: 0;
+  margin: 0;
+
+  color: white;
+  background-color: #81b3d2;
+
+  width: auto;
+  height: auto;
+}
+@media (min-width: @tablet-width) {
+  .WelcomeToCity {
+    /*    padding: 0;
+        margin: 0;
+        width: auto;
+    height: 255px;
+        height: auto;*/
+  }
+}
+
+.WelcomeToCity__articles {
+  /*width: auto;*/
+  /*width: 320px;*/
+  width: inherit;
+  height: auto;
+
+  color: black;
+  background-color: #f2f2f2;
+}
+@media (min-width: @tablet-width) {
+  .WelcomeToCity__articles {
+    /*    width: auto;
+    height: 255px;
+        color: black;
+        background-color: #f2f2f2;*/
+  }
+}
+
+.WelcomeToCity__advantages {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 355px;
+}
+@media (min-width: @tablet-width) {
+  .WelcomeToCity__advantages {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    padding-top: 60px;
+    padding-bottom: 65px;
+    height: 330px;
+  }
+}
+
+.WelcomeToCity__list {
+  padding: 0;
+  margin: 0 auto;
+
+  width: 280px;
+  height: 505px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  list-style: none;
+}
+@media (min-width: @tablet-width) {
+  .WelcomeToCity__list {
+    padding: 0;
+    margin: 0 auto;
+
+    box-sizing: border-box;
+    width: @tablet-width;
+    color: inherit;
+    background-color: inherit;
+    height: 256px;
+    /*padding-top: 50px;*/
+    /*padding-bottom: 50px;*/
+    /*padding-left: 50px;*/
+    /*padding-right: 50px;*/
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (min-width: @desktop-width) {
+  .WelcomeToCity__list {
+    width: @desktop-width;
+    height: 256px;
+  }
+}
+.WelcomeToCity__item {
+  padding: 0;
+  margin: 0;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  width: inherit;
+  height: 168px;
+  box-sizing: border-box;
+
+  text-align: center;
+  background-color: #f2f2f2;
+  border-top: 1px solid #cccccc;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: @tablet-width) {
+  .WelcomeToCity__item {
+    padding: 0;
+    margin: 0;
+
+    padding-top: 48px;
+    padding-bottom: 48px;
+    height: inherit;
+
+    text-align: center;
+    border-top: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.WelcomeToCity__number {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  /*color: red;*/
+  color: inherit;
+  background-color: transparent;
+  font-family: "PT Sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+
+  &::before, &::after {
+    /*content: "--";*/
+    content: "";
+    width: 10px;
+    height: 1px;
+    margin-top: 9px;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: white;
+  }
+
+  &::before {
+    left: -15px;
+  }
+
+  &::after {
+    right: -15px;
+  }
+
+  .WelcomeToCity__item &::before,
+  .WelcomeToCity__item &::after {
+    background-color: black;
+  }
+}

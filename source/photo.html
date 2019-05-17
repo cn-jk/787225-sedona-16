@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!--<link href="css/normalize.css" rel="stylesheet">-->
+    <!--По Тех.Звд. шрифты подключаются ЛОКАЛЬНО !!!-->
+    <!--<link rel="preload" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" as="style">-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
   </head>
   <body>
 
-    <header class="page-header" id="idHeader">      <!--<div class="page-header__wrapper">-->
-      <ul class="page-header__list site-list">
+    <header class="page-header page-header_nojs" id="idHeader">
+      <ul   class="site-list  site-list_close">
 
         <li class="site-list__item site-list__itemtoggle">
           <button class="buttonToggle" disabled></button>
@@ -20,6 +25,7 @@
         <li class="site-list__item">
           <a class="site-list__href">Фото и Видео</a>
         </li>
+        <li class="site-list__item site-list__itemmidle">&nbsp;</li>
         <li class="site-list__item">
           <a class="site-list__href" href="form.html">Форма отзыва</a>
         </li>
@@ -38,131 +44,124 @@
         </nav>
       </div>
 
-    </header>      <!--</div>-->
+    </header>
 
 
-
-    <main class="page-main">
+    <main class="pageMain-photo">      <!--<section class="wrapperMain">-->
 
       <h1 class="visually-hidden">«SEDONA» – Седона -- страница Фото и Видео</h1>
 
-      <!--<section class="wrapperMain">
-      <header class="headerMain-photo headerMain__mobile"
-      -->
-
-      <header class="headerMain headerMain_mobile headerMain_photo-page">
-        <!--<header class="headerMain-photo headerMain__mobile">-->
-        <h3 class="pageTitle">Фото и видео</h3>
-        <p  class="pageText">
-          Не&nbsp;можете&nbsp;решиться&nbsp;на&nbsp;путешествие
-          из-за&nbsp;курса?&nbsp;Фотографии&nbsp;помогут
-          вам&nbsp;забыть&nbsp;о&nbsp;политике&nbsp;и&nbsp;экономике.
-        </p>
+      <header class="headerMain-photo">
+        <div class="headerMain-photo__div">
+          <h3 class="headerMain-photo__title">Фото и видео</h3>
+          <p  class="headerMain-photo__comment">
+            Не можете решиться на&nbsp;путешествие
+            из-за курса? Фотографии&nbsp;помогут
+            вам&nbsp;забыть&nbsp;о&nbsp;политике и экономике.
+          </p>
+        </div>
       </header>
 
       <hr class="hr-line">
 
       <section class="fotoVideo">
 
-        <figure class="fotoVideo__foto foto">
-          <img src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
-          <figcaption class="foto__caption">
-            <h6 class="foto__text_title">Неродные просторы</h6>
-            <p  class="foto__text        foto__author">Борис</p>
-            <p  class="foto__text_title  foto__like-counter">1350</p>
-          </figcaption>
-        </figure>
+        <div class="fotoVideo__foto">
+          <figure class="foto foto_Sunset">
+            <figcaption class="foto__caption">
+              <h6 class="foto__title">Неродные просторы</h6>
+              <p  class="foto__author">Борис</p>
+              <p  class="foto__likeCounter">1350</p>
+            </figcaption>
+          </figure>
+
+          <hr class="hr-line">
+
+          <figure class="foto foto_Cactus">
+            <figcaption class="foto__caption">
+              <h6 class="foto__title">Местная растительность</h6>
+              <p  class="foto__author">Сергей</p>
+              <p  class="foto__likeCounter">143</p>
+            </figcaption>
+          </figure>
+
+          <hr class="hr-line">
+
+          <figure class="foto foto_Roads">
+            <figcaption class="foto__caption">
+              <h6 class="foto__title">Дорога на север</h6>
+              <p  class="foto__author">Петр</p>
+              <p  class="foto__likeCounter">96</p>
+            </figcaption>
+          </figure>
+
+          <hr class="hr-line">
+
+          <figure class="foto foto_Bridge">
+            <figcaption class="foto__caption">
+              <h6 class="foto__title">Мост Дьявола</h6>
+              <p  class="foto__author">Антон</p>
+              <p  class="foto__likeCounter">254</p>
+            </figcaption>
+          </figure>
+        </div>
 
         <hr class="hr-line">
 
-        <figure class="fotoVideo__foto foto">
-          <img src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Местная растительность">
-          <figcaption class="foto__caption">
-            <h6 class="foto__text_title">Местная растительность</h6>
-            <p  class="foto__text        foto__author">Сергей</p>
-            <p  class="foto__text_title  foto__like-counter">143</p>
-          </figcaption>
-        </figure>
+        <div class="fotoVideo__video">
+          <figure class="video" id="videoContainer" data-fullscreen="false">
 
-        <hr class="hr-line">
+            <figcaption class="video__caption">
+              <h3 class="video__title">Все еще сомневаитесь?</h3>
+              <p  class="video__comment">
+                Смотрите&nbsp;видеопрезентацию и скорее за билетами,
+                пока они не подорожали в очередной раз!
+              </p>
+            </figcaption>
 
-        <figure class="fotoVideo__foto foto">
-          <img src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Дорога на север">
-          <figcaption class="foto__caption">
-            <h6 class="foto__text_title">Дорога на север</h6>
-            <p  class="foto__text        foto__author">Петр</p>
-            <p  class="foto__text_title  foto__like-counter">96</p>
-          </figcaption>
-        </figure>
+            <div class="video__progress">
+              <div class="video__line-progress"></div>
+              <div class="video__marker-progress"></div>
+            </div>
 
-        <hr class="hr-line">
-
-        <figure class="fotoVideo__foto foto">
-          <img src="img/main-bridge-mobile@1x.jpg" width="280" height="280" alt="Мост Дьявола">
-          <figcaption class="foto__caption">
-            <h6 class="foto__text_title">Мост Дьявола</h6>
-            <p  class="foto__text        foto__author">Антон</p>
-            <p  class="foto__text_title  foto__like-counter">254</p>
-          </figcaption>
-        </figure>
-
-        <hr class="hr-line">
-
-        <figure class="fotoVideo__video video" id="videoContainer" data-fullscreen="false">
-
-          <figcaption class="video__caption">
-            <h3 class="video__text_title">Все еще сомневаитесь?</h3>
-            <p  class="video__text">
-              Смотрите&nbsp;видеопрезентацию и скорее за билетами,
-              пока они не подорожали в очередной раз!
-            </p>
-          </figcaption>
-
-          <img src="img/video-mobile@1x.jpg" width="320" height="201" alt="Your browser does not support the video tag.">
-
-          <div class="video__progress">
-            <div class="video__line-progress"></div>
-            <div class="video__marker-progress"></div>
-          </div>
-
-          <div class="video__controls">
-            <button class="video__button video__button_replay"></button>
-            <button class="video__button video__button_subtitles"></button>
-            <button class="video__button video__button_fullscreen"></button>
-          </div>
-        </figure>
+            <div class="video__controls">
+              <button class="video__button video__button_replay"></button>
+              <button class="video__button video__button_subtitles"></button>
+              <button class="video__button video__button_fullscreen"></button>
+            </div>
+          </figure>
+        </div>
       </section>
 
       <!--</section>-->
     </main>
 
-    <footer class="page-footer">      <!--<div class="page-footer__wrapper">-->
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
 
-      <div class="page-footer__visitsedona">
-        <p class="pageTitleBig">#VisitSedona</p>
+        <p class="page-footer__visitsedona">#VisitSedona</p>
+
+        <ul class="page-footer__socialnet socialnet-list">
+          <li class="socialnet-list__item">
+            <p class="visually-hidden">Логотип Твиттер</p>
+            <a class="socialnet-list__href icon-twitter"  href="https://www.twitter.com"></a>
+          </li>
+          <li class="socialnet-list__item">
+            <p class="visually-hidden">Логотип Фасебук</p>
+            <a class="socialnet-list__href icon-facebook" href="https://www.facebook.com"></a>
+          </li>
+          <li class="socialnet-list__item">
+            <p class="visually-hidden">Логотип Ютюб</p>
+            <a class="socialnet-list__href icon-youtube"  href="https://www.youtube.com"></a>
+          </li>
+        </ul>
+
+        <div class="page-footer__copyright copyright">
+          <span class="copyright__comment">Разработано</span>
+          <a class="copyright__href logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive"></a>
+        </div>
+
       </div>
-
-      <ul class="page-footer__socialnet socialnet-list">
-        <li class="socialnet-list__item">
-          <p class="visually-hidden">Логотип Твиттер</p>
-          <a class="socialnet-list__href icon-twitter"  href="https://www.twitter.com"></a>
-        </li>
-        <li class="socialnet-list__item">
-          <p class="visually-hidden">Логотип Фасебук</p>
-          <a class="socialnet-list__href icon-facebook" href="https://www.facebook.com"></a>
-        </li>
-        <li class="socialnet-list__item">
-          <p class="visually-hidden">Логотип Ютюб</p>
-          <a class="socialnet-list__href icon-youtube"  href="https://www.youtube.com"></a>
-        </li>
-      </ul>
-
-      <div class="page-footer__copyright copyright">
-        <span class="pageText">Разработано</span>
-        <a class="copyright__href logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive"></a>
-      </div>
-
-      <!--</div>-->
     </footer>
 
     <script src="js/script.js"></script>

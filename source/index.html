@@ -3,14 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <!--<link rel="preload" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" as="style">-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link href="css/style.css"     rel="stylesheet" type="text/css">
+    <!--<link href="css/normalize.css" rel="stylesheet">-->
+    <!--По Тех.Звд. шрифты подключаются ЛОКАЛЬНО !!!-->
+    <!-- <link rel="preload" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" as="style">-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
   </head>
-  <body>
+  <body>  <!--<body onload="myMobileNavBarMenuOnLoadBody()">-->
 
-    <header class="page-header" id="idHeader">      <!--<div class="page-header__wrapper">-->
-      <ul class="page-header__list site-list">
+    <header class="page-header page-header_nojs" id="idHeader">
+      <ul   class="site-list  site-list_close">
 
         <li class="site-list__item site-list__itemtoggle">
           <button class="buttonToggle" disabled></button>
@@ -21,6 +25,7 @@
         <li class="site-list__item">
           <a class="site-list__href" href="photo.html">Фото и Видео</a>
         </li>
+        <li class="site-list__item site-list__itemmidle">&nbsp;</li>
         <li class="site-list__item">
           <a class="site-list__href" href="form.html">Форма отзыва</a>
         </li>
@@ -39,141 +44,137 @@
         </nav>
       </div>
 
-      <!--</div>-->
     </header>
 
 
-    <main class="page-main">      <!--<section class="wrapperMain">-->
+    <main class="pageMain-index">      <!--<section class="wrapperMain">-->
+      <!--<main class="page-main">-->
 
       <h1 class="visually-hidden">«SEDONA» – Седона -- страница Главная</h1>
 
 
-      <header class="headerMain headerMain_mobile">
-        <h3 class="pageTitle headerMain__h3">Седона&nbsp;-&nbsp;небольшой городок&nbsp;в&nbsp;Аризоне, заслуживающий&nbsp;большего!</h3>
-        <p  class="pageText  headerMain__p">Рассмотрим&nbsp;5&nbsp;причин,&nbsp;по&nbsp;которым Седона&nbsp;круче,&nbsp;чем&nbsp;Гранд&nbsp;Каньон!</p>
+      <header class="headerMain-index">
+        <h3 class="headerMain-index__title">Седона&nbsp;-&nbsp;небольшой городок&nbsp;в&nbsp;Аризоне, заслуживающий&nbsp;большего!</h3>
+        <p  class="headerMain-index__comment">Рассмотрим&nbsp;5&nbsp;причин,&nbsp;по&nbsp;которым Седона&nbsp;круче,&nbsp;чем&nbsp;Гранд&nbsp;Каньон!</p>
       </header>
 
       <section class="WelcomeToCity">
+        <h3 class="visually-hidden">Добро пожаловать в Седону</h3>
 
         <div class="triangle"></div>
 
         <article class="WelcomeToCity__articles article">     <!--article__wrapper--left or --right-->
-          <div class="article__div article__vertical">
-            <h4 class="pageTitle">Настоящий городок</h4>
-            <p  class="pageText WelcomeToCity__number">№1</p>
-            <!--<p  class="pageText WelcomeToCity__before-defise WelcomeToCity__after-defise">№1</p>-->
-            <p  class="pageText">Седона не аттракцион для туристов, там течет своя жизнь</p>
+          <div class="article__div">
+            <h4 class="article__title">Настоящий городок</h4>
+            <p  class="article__number WelcomeToCity__number">№1</p>
+            <p  class="article__comment">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-          <img src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Настоящий городок">
+          <div class="article__image article__image_main-city"></div>
         </article>
       </section>
 
 
       <section class="WelcomeToCity__advantages advantage">
         <ul class="advantage__list-vertical">
-          <li class="advantage__item-vertical">
+          <li class="advantage__item-vertical advantage_flexOrder1">
             <div class="advantage__icon advantage__icon_house"></div>
             <div class="advantage__div-vertical">
-              <h6  class="pageTitle" style="margin-bottom: 10px;">Жилье</h6>
-              <p   class="pageText">рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+              <h6  class="advantage__title">Жилье</h6>
+              <p   class="advantage__comment">рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </div>
           </li>
 
-          <li class="advantage__item-vertical">
+          <li class="advantage__item-vertical advantage_flexOrder3">
             <div class="advantage__icon advantage__icon_gift"></div>
-            <div class="advantage__div-vertical">
-              <h6 class="pageTitle" style="margin-bottom: 10px;">Сувениры</h6>
-              <p class="pageText">не только китайского, но и местного производства!</p>
+            <div class="advantage__div-vertical advantage__div-vertical_gift">
+              <h6 class="advantage__title">Сувениры</h6>
+              <p class="advantage__comment">не только китайского, но и местного производства!</p>
             </div>
           </li>
 
-          <li class="advantage__item-vertical">
+          <li class="advantage__item-vertical advantage_flexOrder2">
             <div class="advantage__icon advantage__icon_burger"></div>
-            <div class="advantage__div-vertical">
-              <h6 class="pageTitle" style="margin-bottom: 10px;">Еда</h6>
-              <p class="pageText">всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            <div class="advantage__div-vertical advantage__div-vertical_burger">
+              <h6 class="advantage__title">Еда</h6>
+              <p class="advantage__comment">всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </div>
           </li>
         </ul>
       </section>
 
 
-      <article class="WelcomeToCity__articles article">
-        <div class="article__div article__vertical">  <!--article__wrapper--left or --right-->
-          <h4 class="pageTitle">Там есть Мост Дьявола</h4>
-          <p  class="pageText WelcomeToCity__number">№2</p>
-          <p  class="pageText">Да, по нему можно пройти если вы осмелитесь, конечно</p>
-        </div>
-        <img src="img/photo-bridge-mobile@1x.jpg" width="320" height="260" alt="Мост Дьявола">
-      </article>
+      <section class="WelcomeToCity">
+        <h3 class="visually-hidden">Добро пожаловать в Седону</h3>
+
+        <article class="WelcomeToCity__articles article article_reverse">
+          <div class="article__div">
+            <h4 class="article__title">Там&nbsp;есть Мост&nbsp;Дьявола</h4>
+            <p  class="article__number WelcomeToCity__number">№2</p>
+            <p  class="article__comment">Да, по нему можно пройти если вы осмелитесь, конечно</p>
+          </div>
+          <div class="article__image article__image_photo-bridge"></div>
+        </article>
+      </section>
 
       <section class="WelcomeToCity__articles">
         <ul class="WelcomeToCity__list">
-          <li class="WelcomeToCity__item">
-            <h4 class="pageTitle">Небольшая площадь</h4>
-            <p class="pageText WelcomeToCity__number">№3</p>
-            <p class="pageText" >Все интересные места находятся очень близко</p>
+          <li class="WelcomeToCity__item article">
+            <h4 class="article__title">Небольшая площадь</h4>
+            <p class="article__number WelcomeToCity__number">№3</p>
+            <p class="article__comment" >Все интересные места находятся очень близко</p>
           </li>
 
-          <li class="WelcomeToCity__item">
-            <h4 class="pageTitle">Красивая дорога</h4>
-            <p class="pageText WelcomeToCity__number">№4</p>
-            <p class="pageText">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          <li class="WelcomeToCity__item article">
+            <h4 class="article__title">Красивая дорога</h4>
+            <p class="article__number WelcomeToCity__number">№4</p>
+            <p class="article__comment">Ехать в Седону из Лас-Вегаса совсем не&nbsp;скучно!</p>
           </li>
 
-          <li class="WelcomeToCity__item">
-            <h4 class="pageTitle">Мало туристов</h4>
-            <p class="pageText WelcomeToCity__number">№5</p>
-            <p class="pageText">Большинство едет в Гранд Каньон и толпится там</p>
+          <li class="WelcomeToCity__item article">
+            <h4 class="article__title">Мало туристов</h4>
+            <p class="article__number WelcomeToCity__number">№5</p>
+            <p class="article__comment">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ul>
       </section>
 
       <section class="searchHotel">
-        <div class="searchHotel__wrapper">
-
-          <h4 class="pageTitleBig searchHotel__title">Заинтересовались?</h4>
-          <!--<h4 class="searchHotel__title pageTitleBig">Заинтересовались?</h4>-->
-
-          <p class="pageText searchHotel__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие преложения гостиниц в Седоне</p>
-
-          <button class="pageTitleBig searchHotel__button">Найти гостиницу</button>
-        </div>
+        <h4 class="searchHotel__title">Заинтересовались?</h4>
+        <p  class="searchHotel__comment">Укажите предполагаемые&nbsp;даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам лучшие преложения гостиниц в Седоне</p>
+        <button class="searchHotel__button">Найти гостиницу</button>
       </section>
 
-      <img class="searchHotel__map" src="img/bg-map-mobile@1x.jpg" width="320" height="360" alt="Карта штата">
-      <!--<img class="searchHotel__map" src="http://placehold.it/150x100" width="60" height="160" alt="Карта штата">-->
+      <div class="searchHotel__map"></div>
 
       <!--</section>-->
     </main>
 
-    <footer class="page-footer">      <!--<div class="page-footer__wrapper">-->
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
 
-      <div class="page-footer__visitsedona">
-        <p class="pageTitleBig">#VisitSedona</p>
+        <p class="page-footer__visitsedona">#VisitSedona</p>
+
+        <ul class="page-footer__socialnet socialnet-list">
+          <li class="socialnet-list__item">
+            <p class="visually-hidden">Логотип Твиттер</p>
+            <a class="socialnet-list__href icon-twitter"  href="https://www.twitter.com"></a>
+          </li>
+          <li class="socialnet-list__item">
+            <p class="visually-hidden">Логотип Фасебук</p>
+            <a class="socialnet-list__href icon-facebook" href="https://www.facebook.com"></a>
+          </li>
+          <li class="socialnet-list__item">
+            <p class="visually-hidden">Логотип Ютюб</p>
+            <a class="socialnet-list__href icon-youtube"  href="https://www.youtube.com"></a>
+          </li>
+        </ul>
+
+        <div class="page-footer__copyright copyright">
+          <span class="copyright__comment">Разработано</span>
+          <a class="copyright__href logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive"></a>
+        </div>
+
       </div>
-
-      <ul class="page-footer__socialnet socialnet-list">
-        <li class="socialnet-list__item">
-          <p class="visually-hidden">Логотип Твиттер</p>
-          <a class="socialnet-list__href icon-twitter"  href="https://www.twitter.com"></a>
-        </li>
-        <li class="socialnet-list__item">
-          <p class="visually-hidden">Логотип Фасебук</p>
-          <a class="socialnet-list__href icon-facebook" href="https://www.facebook.com"></a>
-        </li>
-        <li class="socialnet-list__item">
-          <p class="visually-hidden">Логотип Ютюб</p>
-          <a class="socialnet-list__href icon-youtube"  href="https://www.youtube.com"></a>
-        </li>
-      </ul>
-
-      <div class="page-footer__copyright copyright">
-        <span class="pageText">Разработано</span>
-        <a class="copyright__href logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive"></a>
-      </div>
-
-      <!--</div>-->
     </footer>
 
     <script src="js/script.js"></script>

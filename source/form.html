@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!--<link href="css/normalize.css" rel="stylesheet">-->
+    <!--По Тех.Звд. шрифты подключаются ЛОКАЛЬНО !!!-->
+    <!--<link rel="preload" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" as="style">-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
   </head>
   <body>
 
-    <header class="page-header" id="idHeader">      <!--<div class="page-header__wrapper">-->
-      <ul class="page-header__list site-list">
+    <header class="page-header page-header_nojs" id="idHeader">
+      <ul   class="site-list  site-list_close">
 
         <li class="site-list__item site-list__itemtoggle">
           <button class="buttonToggle" disabled></button>
@@ -20,6 +25,7 @@
         <li class="site-list__item">
           <a class="site-list__href" href="photo.html">Фото и Видео</a>
         </li>
+        <li class="site-list__item site-list__itemmidle">&nbsp;</li>
         <li class="site-list__item">
           <a class="site-list__href">Форма отзыва</a>
         </li>
@@ -38,20 +44,15 @@
         </nav>
       </div>
 
-    </header>     <!--</div>-->
+    </header>
 
 
-
-    <main class="page-main">
-
+    <main class="pageMain-form">      <!--<section class="wrapperMain">-->
       <h1 class="visually-hidden">«SEDONA» – Седона -- Форма отзыва</h1>
 
-      <!--<section class="wrapperMain">-->
-
-      <header class="headerMain headerMain_mobile headerMain_form-page">
-        <!--<header class="headerMain-form-photo headerMain_mobile">-->
-        <h3 class="pageTitle">Оставьте свой отзыв</h3>
-        <p  class="pageText">
+      <header class="headerMain-form">
+        <h3   class="headerMain-form__title">Оставьте свой отзыв</h3>
+        <p    class="headerMain-form__comment">
           Поиогите&nbsp;нашим&nbsp;отелям&nbsp;стать&nbsp;лучше!
           Оставьте отзыв о них, а также о посещенных вами достопримечательностях
         </p>
@@ -61,130 +62,144 @@
 
       <form class="formFeedBack" method="get" action="https://echo.htmlacademy.ru">
 
-        <fieldset class="whoAreYou">
-          <legend class="pageTitle whoAreYou__legend">Представьтесь:</legend>
-          <div class="formFeedBack__flex whoAreYou__div">
-            <p class="whoAreYou__p">
-              <label class="pageText whoAreYou__label" for="idname">Имя:</label>
-              <input class="inputText whoAreYou__grow" id="idname" type="text" name="nmName" placeholder="Петр">
+        <fieldset    class="whoAreYou">
+          <legend    class="whoAreYou__legend">Представьтесь:</legend>
+          <div       class="whoAreYou__div">
+            <p       class="whoAreYou__p">
+              <label class="whoAreYou__label" for="idname">Имя*:</label>
+              <input class="whoAreYou__input" id="idname" type="text" name="nmName" placeholder="Петр" required>
             </p>
-            <p class="whoAreYou__p">
-              <label class="pageText whoAreYou__label" for="idFaml">Фамилия:</label>
-              <input class="inputText" id="idFaml" type="text" name="nmFaml" placeholder="Иванов">
+            <p       class="whoAreYou__p">
+              <label class="whoAreYou__label" for="idFaml">Фамилия*:</label>
+              <input class="whoAreYou__input" id="idFaml" type="text" name="nmFaml" placeholder="Иванов" required>
             </p>
-            <p class="whoAreYou__p">
-              <label class="pageText whoAreYou__label" for="idOtch">Отчество:</label>
-              <input class="inputText" id="idOtch" type="text" name="nmOtch" placeholder="Александрович">
+            <p       class="whoAreYou__p">
+              <label class="whoAreYou__label" for="idOtch">Отчество:</label>
+              <input class="whoAreYou__input" id="idOtch" type="text" name="nmOtch" placeholder="Александрович">
             </p>
           </div>
         </fieldset>
 
-        <hr class="hr-line">
+        <hr class="hr-line hr-line_2">
 
         <fieldset class="contactInformation">
-          <legend class="pageTitle contactInformation__legend">Контактная информация:</legend>
+          <legend class="contactInformation__legend">Контактная информация:</legend>
 
-          <div class="formFeedBack__flex contactInformation__div">
-            <label  class="pageText contactInformation__label" for="id-phone">Контактный телефон*:</label>
-            <p class="contactInformation__p">
-              <input class="inputText contactInformation__input" type="tel" id="id-phone" name="nmPhone" placeholder="Введите телефон">
-              <span class="contactInformation__icon contactInformation__icon_tel"></span>
-            </p>
+          <div class="contactInformation__wrap">
+            <div       class="contactInformation__div   contactInformation__div_tel">
+              <label   class="contactInformation__label contactInformation__label_tel" for="id-phone">Контактный телефон*:</label>
+              <p       class="contactInformation__p">
+                <input class="contactInformation__input" type="tel" id="id-phone" name="nmPhone" placeholder="Введите телефон" required>
+                <span  class="contactInformation__icon contactInformation__icon_tel"></span>
+              </p>
+            </div>
+
+            <div       class="contactInformation__div">
+              <label   class="contactInformation__label" for="id-email">Электронная почта*:</label>
+              <p       class="contactInformation__p">
+                <input class="contactInformation__input" type="email" id="id-email" name="nmEmail" placeholder="Введите e-mail" required>
+                <span  class="contactInformation__icon contactInformation__icon_email"></span>
+              </p>
+            </div>
           </div>
-
-          <div class="formFeedBack__flex contactInformation__div">
-            <label class="pageText contactInformation__label" for="id-email">Электронная почта*:</label>
-            <p class="contactInformation__p">
-              <input class="inputText contactInformation__input" type="email" id="id-email" name="nmEmail" placeholder="Введите e-mail">
-              <span class="contactInformation__icon contactInformation__icon_email"></span>
-            </p>
-          </div>
-
         </fieldset>
 
-        <hr class="hr-line">
+        <hr class="hr-line hr-line_4">
 
         <fieldset class="yourOverallImpression">
-          <legend class="pageTitle yourOverallImpression__legend">Ваше общее впечатление:</legend>
-          <div class="formFeedBack__flex yourOverallImpression__div">
-            <p class="yourOverallImpression__p">
-              <input type="radio" name="nmYourOverallImpression" value="RatherPositive" checked>
-              Скорее положительное
-            </p>
-            <p class="yourOverallImpression__p">
-              <input type="radio" name="nmYourOverallImpression" value="RatherNegative">
-              Скорее отрицательное
-            </p>
-            <p class="yourOverallImpression__p">
-              <input type="radio" name="nmYourOverallImpression" value="DifficultToAnswer">
-              Затрудняюсь ответить
-            </p>
+          <legend class="yourOverallImpression__legend">Ваше общее впечатление:</legend>
+
+          <div class="yourOverallImpression__div radio-button">
+
+            <label   class="radio-button__label radio-button__name">Скорее положительное
+              <input class="radio-button__input" type="radio" name="nmYourOverallImpression" value="RatherPositive" checked>
+              <span  class="radio-button__icon"></span>
+              <!--<span  class="radio-button__name">Скорее положительное</span>-->
+            </label>
+
+            <label   class="radio-button__label radio-button__name">Скорее отрицательное
+              <input class="radio-button__input" type="radio" name="nmYourOverallImpression" value="RatherNegative">
+              <span  class="radio-button__icon"></span>
+              <!--<span  class="radio-button__name">Скорее отрицательное</span>-->
+            </label>
+
+            <label   class="radio-button__label radio-button__name">Затрудняюсь ответить
+              <input class="radio-button__input" type="radio" name="nmYourOverallImpression" value="DifficultToAnswer">
+              <span  class="radio-button__icon"></span>
+              <!--<span  class="radio-button__name">Затрудняюсь ответить</span>-->
+            </label>
+
           </div>
         </fieldset>
 
-        <hr class="hr-line">
+        <hr class="hr-line hr-line_6">
 
         <fieldset class="visitedAttractions">
-          <legend class="pageTitle visitedAttractions__legend">Посещенные достопримечательности:</legend>
-          <div class="formFeedBack__flex yourOverallImpression__div">
-            <p class="visitedAttractions__p">
-              <input type="checkbox" name="nmvisitedPlace1" value="DevilsBridge" checked>
-              Мост Дьявола
-            </p>
-            <p class="visitedAttractions__p">
-              <input type="checkbox" name="nmvisitedPlace2" value="MountBell"    checked>
-              Гора Колокол
-            </p>
-            <p class="visitedAttractions__p">
-              <input type="checkbox" name="nmvisitedPlace3" value="SlidePark"    checked>
-              Слайд-парк
-            </p>
-            <p class="visitedAttractions__p">
-              <input type="checkbox" name="nmvisitedPlace4" value="RedRocks"            >
-              Красные скалы
-            </p>
+          <legend class="visitedAttractions__legend">Посещенные достопримечательности:</legend>
+
+          <div class="visitedAttractions__div check-box">
+
+            <label   class="check-box__label check-box__name">Мост Дьявола
+              <input class="check-box__input" type="checkbox" name="nmvisitedPlace1" value="DevilsBridge" checked>
+              <span  class="check-box__icon"></span>
+            </label>
+            <label   class="check-box__label check-box__name">Гора Колокол
+              <input class="check-box__input" type="checkbox" name="nmvisitedPlace2" value="MountBell" checked>
+              <span  class="check-box__icon"></span>
+            </label>
+            <label   class="check-box__label check-box__name">Слайд-парк
+              <input class="check-box__input" type="checkbox" name="nmvisitedPlace3" value="SlidePark" checked>
+              <span  class="check-box__icon"></span>
+            </label>
+            <label   class="check-box__label check-box__name">Красные скалы
+              <input class="check-box__input" type="checkbox" name="nmvisitedPlace4" value="RedRocks">
+              <span  class="check-box__icon"></span>
+            </label>
+
           </div>
         </fieldset>
 
-        <hr class="hr-line">
+        <hr class="hr-line hr-line_8">
 
-        <fieldset class="describeYourEmotions">
-          <legend class="pageTitle describeYourEmotions__legend">Опишите свои эмоции:</legend>
-          <textarea class="pageTextArea inputText" rows="6" cols="50" name="nmTextarea" placeholder="Опишите подробно все свои восторги"></textarea>
+        <fieldset   class="describeYourEmotions">
+          <legend   class="describeYourEmotions__legend">Опишите свои эмоции:</legend>
+          <textarea class="describeYourEmotions__input" rows="6" cols="50" name="nmTextarea" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
 
-        <button type="submit" class="pageTitleBig searchHotel__button">Отправить отзыв</button>
+        <button     class="searchHotel__button" type="submit" >Отправить отзыв</button>
+
+        <span       class="requiredFields">*&nbsp;<span>--</span>&nbsp;Обязательные поля</span>
       </form>
       <!--</section>-->
     </main>
 
-    <footer class="page-footer">      <!--<div class="page-footer__wrapper">-->
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
 
-      <div class="page-footer__visitsedona">
-        <p class="pageTitleBig">#VisitSedona</p>
+        <p class="page-footer__visitsedona">#VisitSedona</p>
+
+        <ul class="page-footer__socialnet socialnet-list">
+          <li class="socialnet-list__item">
+            <p class="visually-hidden">Логотип Твиттер</p>
+            <a class="socialnet-list__href icon-twitter"  href="https://www.twitter.com"></a>
+          </li>
+          <li class="socialnet-list__item">
+            <p class="visually-hidden">Логотип Фасебук</p>
+            <a class="socialnet-list__href icon-facebook" href="https://www.facebook.com"></a>
+          </li>
+          <li class="socialnet-list__item">
+            <p class="visually-hidden">Логотип Ютюб</p>
+            <a class="socialnet-list__href icon-youtube"  href="https://www.youtube.com"></a>
+          </li>
+        </ul>
+
+        <div class="page-footer__copyright copyright">
+          <span class="copyright__comment">Разработано</span>
+          <a class="copyright__href logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive"></a>
+        </div>
+
       </div>
-
-      <ul class="page-footer__socialnet socialnet-list">
-        <li class="socialnet-list__item">
-          <p class="visually-hidden">Логотип Твиттер</p>
-          <a class="socialnet-list__href icon-twitter"  href="https://www.twitter.com"></a>
-        </li>
-        <li class="socialnet-list__item">
-          <p class="visually-hidden">Логотип Фасебук</p>
-          <a class="socialnet-list__href icon-facebook" href="https://www.facebook.com"></a>
-        </li>
-        <li class="socialnet-list__item">
-          <p class="visually-hidden">Логотип Ютюб</p>
-          <a class="socialnet-list__href icon-youtube"  href="https://www.youtube.com"></a>
-        </li>
-      </ul>
-
-      <div class="page-footer__copyright copyright">
-        <span class="pageText">Разработано</span>
-        <a class="copyright__href logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive"></a>
-      </div>
-
-    </footer>      <!--</div>-->
+    </footer>
 
     <script src="js/script.js"></script>
     <noscript>ВНИМАНИЕ! Ваш браузер не поддерживает JavaScript.</noscript>

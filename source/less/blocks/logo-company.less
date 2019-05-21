@@ -1,4 +1,4 @@
-.logo-company {
+/*.logo-company {
   background-image: url("../img/logo-sedona-mobile.svg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -14,5 +14,19 @@
   .logo-company {
     background-image: url("../img/logo-sedona-desktop.svg");
     background-size: 186px 96px;
+  }
+}*/
+
+.logo-company {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
+@media (min-width: @desktop-width) {
+  .logo-company {
+    display: block;
+    width: 186px;
+    height: auto;
   }
 }

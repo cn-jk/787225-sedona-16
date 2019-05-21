@@ -39,6 +39,19 @@ body {
   font-weight: 700;
   font-style: normal;
 }
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .page-header {
   padding: 0;
   margin: 0 auto;
@@ -139,16 +152,18 @@ body {
   background-color: white;
 }
 .header-div__logo {
+  /*  max-width: 100%;
+    height: auto;
+  margin-top: -1px;*/
   min-width: 100px;
   min-height: 80px;
-  /*margin-top: -1px;*/
   position: relative;
   z-index: 2;
 }
 @media (min-width: 768px) {
   .header-div__logo {
-    min-width: 100px;
-    min-height: 80px;
+    /*    min-width: 100px;
+        min-height: 80px;*/
     position: relative;
     z-index: 2;
   }
@@ -161,7 +176,6 @@ body {
     z-index: 2;
   }
 }
-/* ---- */
 .header-div_1background-image {
   min-height: 440px;
   background-image: url("../img/text-sedona-index.svg"), url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
@@ -229,22 +243,34 @@ body {
     background-size: 460px 80px, 1200px 57px, 1200px 518px;
   }
 }
-.logo-company {
+/*.logo-company {
   background-image: url("../img/logo-sedona-mobile.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100px 80px;
 }
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .logo-company {
     background-image: url("../img/logo-sedona-tablet.svg");
     background-size: 100px 80px;
-  }
-}
-@media (min-width: 1200px) {
+  }}
+
+@media (min-width: @desktop-width) {
   .logo-company {
     background-image: url("../img/logo-sedona-desktop.svg");
     background-size: 186px 96px;
+  }
+}*/
+.logo-company {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+@media (min-width: 1200px) {
+  .logo-company {
+    display: block;
+    width: 186px;
+    height: auto;
   }
 }
 .buttonToggle {
@@ -284,17 +310,29 @@ body {
   background-image: url("../img/icon-menu.svg");
   cursor: pointer;
 }
-.logo-htmlacademy {
+/*.logo-htmlacademy {
   background-image: url("../img/logo-htmlacademy.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 27px 34px;
+
+  &:hover {
+    background-image: url("../img/logo-htmlacademy-blue.svg");
+  }
+  &:active {
+    background-image: url("../img/logo-htmlacademy-grey.svg");
+  }
+}*/
+.logo-htmlacademy {
+  display: block;
+  width: 27px;
+  height: auto;
 }
-.logo-htmlacademy:hover {
-  background-image: url("../img/logo-htmlacademy-blue.svg");
+.logo-htmlacademy:hover path {
+  fill: #81b3d2;
 }
-.logo-htmlacademy:active {
-  background-image: url("../img/logo-htmlacademy-grey.svg");
+.logo-htmlacademy:active path {
+  fill: #bfbfbf;
 }
 /* ---- */
 .page-main {
@@ -692,7 +730,7 @@ body {
 @media (min-width: 768px) {
   .headerMain-photo {
     width: 768px;
-    height: 245px;
+    height: 175px;
   }
 }
 @media (min-width: 1200px) {
@@ -1105,7 +1143,7 @@ body {
     line-height: 1.4;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .article__comment {
     width: 267px;
     margin-top: 5px;
@@ -1330,8 +1368,6 @@ body {
         flex-shrink: 2;
     width: 165px;
     height: 109px;
-    /* height: 105px; */
-    /*margin-top: 5px;*/
   }
 }
 @media (min-width: 1200px) {
@@ -1355,9 +1391,6 @@ body {
           box-sizing: border-box;
   width: 37px;
   height: 36px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 37px 36px;
 }
 @media (min-width: 768px) {
   .advantage__icon {
@@ -1367,31 +1400,8 @@ body {
             box-sizing: border-box;
     width: 75px;
     height: 75px;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: 75px 75px;
   }
 }
-.advantage__icon_house {
-  background-image: url("../img/icon-house.svg");
-}
-.advantage__icon_gift {
-  background-image: url("../img/icon-gift.svg");
-}
-.advantage__icon_burger {
-  background-image: url("../img/icon-burger.svg");
-}
-/*@media (min-width: @tablet-width) {
-  .advantage__icon_house {
-    background-image: url("../img/icon-house.svg");
-  }
-  .advantage__icon_gift {
-    background-image: url("../img/icon-gift.svg");
-  }
-  .advantage__icon_burger {
-    background-image: url("../img/icon-burger.svg");
-  }
-}*/
 /* PT-Sans
 uppercase */
 .advantage__title {
@@ -2746,20 +2756,16 @@ form and photo
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: black;
   background-color: white;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 280px 280px;
 }
 @media (min-width: 768px) {
   .foto {
     width: 325px;
     height: 347px;
-    background-size: 325px 265px;
     background-color: #f2f2f2;
   }
   .foto:nth-child(5) {
@@ -2768,7 +2774,6 @@ form and photo
   .foto:first-child {
     width: 650px;
     height: 480px;
-    background-size: 650px 400px;
     background-color: #f2f2f2;
   }
 }
@@ -2776,46 +2781,42 @@ form and photo
   .foto {
     width: 400px;
     height: 265px;
-    background-size: 400px 265px;
     background-color: transparent;
   }
   .foto:first-child {
     width: 1200px;
     height: 400px;
-    background-size: 1200px 400px;
     background-color: transparent;
   }
 }
-.foto_Sunset {
-  background-image: url("../img/photo-sunset-mobile@1x.jpg");
+.foto__img {
+  display: block;
+  padding: 0;
+  margin: 0;
+  /*margin-bottom: auto;*/
+  width: 280px;
+  height: 280px;
 }
 @media (min-width: 768px) {
-  .foto_Sunset {
-    background-image: url("../img/photo-sunset-tablet@1x.jpg");
+  .foto__img {
+    display: block;
+    width: 325px;
+    height: 267px;
+  }
+  .foto:first-child .foto__img {
+    width: 650px;
+    height: 400px;
   }
 }
-.foto_Cactus {
-  background-image: url("../img/photo-cactus-mobile@1x.jpg");
-}
-@media (min-width: 768px) {
-  .foto_Cactus {
-    background-image: url("../img/photo-cactus-tablet@1x.jpg");
+@media (min-width: 1200px) {
+  .foto__img {
+    display: block;
+    width: 400px;
+    height: 265px;
   }
-}
-.foto_Roads {
-  background-image: url("../img/photo-roads-mobile@1x.jpg");
-}
-@media (min-width: 768px) {
-  .foto_Roads {
-    background-image: url("../img/photo-roads-tablet@1x.jpg");
-  }
-}
-.foto_Bridge {
-  background-image: url("../img/main-bridge-mobile@1x.jpg");
-}
-@media (min-width: 768px) {
-  .foto_Bridge {
-    background-image: url("../img/main-bridge-tablet@1x.jpg");
+  .foto:first-child .foto__img {
+    width: 1200px;
+    height: 400px;
   }
 }
 .foto__caption {
@@ -2843,6 +2844,7 @@ form and photo
 @media (min-width: 1200px) {
   .foto__caption {
     padding: 20px;
+    margin-top: -75px;
     background-color: rgba(0, 0, 0, 0.3);
   }
 }
@@ -2976,7 +2978,7 @@ form and photo
   .video {
     /*padding-top: 65px;*/
     width: 650px;
-    height: 745px;
+    height: 675px;
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: 650px 500px;
@@ -3778,16 +3780,14 @@ form and photo
   font-size: 14px;
 }
 .copyright__href {
-  display: block;
+  /*display: block;*/
   text-decoration: none;
-  min-width: 27px;
-  min-height: 34px;
+  /*  min-width: 27px;
+    min-height: 34px;*/
   cursor: pointer;
 }
-.visually-hidden {
-  display: none;
-}
 /*
+@import "./blocks/visually-hidden.less";
 @import "./fonts/ptsans-400.less";
 @import "./fonts/ptsans-700.less";
 @import "icon-cross.less";

@@ -6,12 +6,14 @@
   display: flex;
   flex-direction: column;
 }
+
 @media (min-width: @tablet-width) {
   .page-header {
     height: auto;
     max-width: 768px;
   }
 }
+
 @media (min-width: @desktop-width) {
   .page-header {
     height: auto;
@@ -19,7 +21,9 @@
   }
 }
 
-.page-header_nojs {/*-class is empty! 2019-05-12-*/}
+.page-header_nojs {
+  /*-class is empty! 2019-05-12-*/
+}
 
 .page-header__list_open {
   display: flex;
@@ -37,6 +41,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
 @media (min-width: @tablet-width) {
   .page-header__nav {
     max-width: @tablet-width;
@@ -45,6 +50,7 @@
     justify-content: center;
   }
 }
+
 @media (min-width: @desktop-width) {
   .page-header__nav {
     max-width: @desktop-width;

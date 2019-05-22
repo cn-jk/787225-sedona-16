@@ -13,6 +13,7 @@
   color: black;
   background-color: white;
 }
+
 @media (min-width: @tablet-width) {
   .foto {
     width: 325px;
@@ -30,12 +31,14 @@
     background-color: #f2f2f2;
   }
 }
+
 @media (min-width: @desktop-width) {
   .foto {
     width: 400px;
     height: 265px;
     background-color: transparent;
   }
+
   .foto:first-child {
     width: 1200px;
     height: 400px;
@@ -53,23 +56,27 @@
   width: 280px;
   height: 280px;
 }
+
 @media (min-width: @tablet-width) {
   .foto__img {
     display: block;
     width: 325px;
     height: 267px;
   }
+
   .foto:first-child .foto__img {
     width: 650px;
     height: 400px;
   }
 }
+
 @media (min-width: @desktop-width) {
   .foto__img {
     display: block;
     width: 400px;
     height: 265px;
   }
+
   .foto:first-child .foto__img {
     width: 1200px;
     height: 400px;
@@ -87,11 +94,13 @@
   color: black;
   background-color: transparent;
 }
+
 @media (min-width: @tablet-width) {
   .foto__caption {
     padding: 20px;
   }
 }
+
 @media (min-width: @desktop-width) {
   .foto__caption {
     padding: 20px;
@@ -105,18 +114,20 @@
   margin: 0;
   color: black;
   background-color: transparent;
-  font-family: "PT Sans";
+  font-family: @font-family;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.4;
 }
+
 @media (min-width: @tablet-width) {
   .foto__title {
     color: black;
     line-height: 0.4;
   }
 }
+
 @media (min-width: @desktop-width) {
   .foto__title {
     color: white;
@@ -127,7 +138,7 @@
 .foto__author {
   padding: 0;
   margin: 0;
-  font-family: "PT Sans";
+  font-family: @font-family;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
@@ -138,6 +149,7 @@
     content: "Автор фото: ";
   }
 }
+
 @media (min-width: @tablet-width) {
   .foto__author {
     order: 3;
@@ -145,6 +157,7 @@
     line-height: 0.4;
   }
 }
+
 @media (min-width: @desktop-width) {
   .foto__author {
     order: 3;
@@ -157,7 +170,7 @@
 .foto__likeCounter {
   padding: 0;
   margin: 0;
-  font-family: "PT Sans";
+  font-family: @font-family;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.4;
@@ -167,10 +180,11 @@
   &::before {
     padding: 0 15px 0 0;
     margin: 0;
-    content: url('../img/icon-like.svg');
+    content: url("../img/icon-like.svg");
     opacity: 0.4;
   }
 }
+
 @media (min-width: @tablet-width) {
   .foto__likeCounter {
     align-self: flex-end;
@@ -179,6 +193,7 @@
     line-height: 0.4;
   }
 }
+
 @media (min-width: @desktop-width) {
   .foto__likeCounter {
     align-self: flex-end;
@@ -191,7 +206,7 @@
       padding: 0 15px 0 0;
       margin: 0;
       color: white;
-      content: url('../img/icon-like-white.svg');
+      content: url("../img/icon-like-white.svg");
       opacity: 1;
     }
   }

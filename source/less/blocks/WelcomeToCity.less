@@ -6,8 +6,10 @@
   width: auto;
   height: auto;
 }
+
 @media (min-width: @tablet-width) {
   .WelcomeToCity {
+    /* foo */
   }
 }
 
@@ -17,8 +19,10 @@
   color: black;
   background-color: #f2f2f2;
 }
+
 @media (min-width: @tablet-width) {
   .WelcomeToCity__articles {
+    /* foo */
   }
 }
 
@@ -30,6 +34,7 @@
   margin-bottom: 30px;
   height: 355px;
 }
+
 @media (min-width: @tablet-width) {
   .WelcomeToCity__advantages {
     padding: 0;
@@ -52,6 +57,7 @@
   align-items: center;
   list-style: none;
 }
+
 @media (min-width: @tablet-width) {
   .WelcomeToCity__list {
     padding: 0;
@@ -67,12 +73,14 @@
     align-items: center;
   }
 }
+
 @media (min-width: @desktop-width) {
   .WelcomeToCity__list {
     width: @desktop-width;
     height: 256px;
   }
 }
+
 .WelcomeToCity__item {
   padding: 0;
   margin: 0;
@@ -89,6 +97,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 @media (min-width: @tablet-width) {
   .WelcomeToCity__item {
     padding: 0;
@@ -104,18 +113,20 @@
     align-items: center;
   }
 }
+
 .WelcomeToCity__number {
   position: relative;
   padding: 0;
   margin: 0;
   color: inherit;
   background-color: transparent;
-  font-family: "PT Sans";
+  font-family: @font-family;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
 
-  &::before, &::after {
+  &::before,
+  &::after {
     content: "";
     width: 10px;
     height: 1px;

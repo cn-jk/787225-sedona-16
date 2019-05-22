@@ -1,6 +1,7 @@
 .requiredFields {
   display: none;
 }
+
 @media (min-width: @tablet-width) {
   .requiredFields {
     display: block;
@@ -9,7 +10,7 @@
     color: black;
     background-color: transparent;
     width: 190px;
-    font-family: "PT Sans";
+    font-family: @font-family;
     font-weight: 400;
     font-size: 14px;
     text-transform: uppercase;
@@ -19,6 +20,7 @@
     order: 8;
   }
 }
+
 @media (min-width: @desktop-width) {
   .requiredFields {
     margin-left: auto;

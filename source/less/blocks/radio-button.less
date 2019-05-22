@@ -1,8 +1,9 @@
 .radio-button {
   padding: 0;
   margin: 0 auto;
-  font-family: "PT Sans";
+  font-family: @font-family;
 }
+
 @media (min-width: @tablet-width) {
   .radio-button {
     padding: 0;
@@ -14,43 +15,35 @@
   padding: 0;
   margin: 0;
   position: relative;
-
   cursor: pointer;
-
   height: 55px;
-
   font-weight: 700;
   font-size: 18px;
   line-height: 0.9;
-
   border: none;
   text-align: left;
-
-  /*display: block;*/
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
 
-  &:hover  .radio-button__icon {
-    background-color:  #e5e5e5;
+  &:hover .radio-button__icon {
+    background-color: e5e5e5;
     border: 17px solid #e5e5e5;
   }
 
   &:active .radio-button__icon {
-    /*background-color:  gold;*/
-    background-color:  #d5d5d5;
+    background-color: #d5d5d5;
     border: 17px solid #d5d5d5;
   }
 
   &:hover .radio-button__input:checked ~ .radio-button__icon {
-    /*background-color:  green;*/
-    background-color:  black;
+    background-color: black;
     border: 17px solid #e5e5e5;
   }
+
   &:active .radio-button__input:checked ~ .radio-button__icon {
-    /*background-color:  red;*/
-    background-color:  #999999;
+    background-color: #999999;
     border: 17px solid #d5d5d5;
   }
 }
@@ -61,7 +54,6 @@
   width: 22px;
   height: 15px;
   visibility: hidden;
-  /*order:2;*/
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
 }
@@ -72,9 +64,8 @@
   width: 55px;
   height: 55px;
   box-sizing: border-box;
-  /*order: 1;*/
   border-radius: 50%;
-  background-color:  #f2f2f2;
+  background-color: #f2f2f2;
   border: 17px solid #f2f2f2;
 }
 

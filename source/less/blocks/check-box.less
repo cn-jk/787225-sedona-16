@@ -1,50 +1,47 @@
 .check-box {
   padding: 0;
   margin: 0 auto;
-  font-family: "PT Sans";
+  font-family: @font-family;
 }
 
 .check-box__label {
   padding: 0;
   margin: 0;
   position: relative;
-
   cursor: pointer;
-
   height: 55px;
-
   font-weight: 700;
   font-size: 18px;
   line-height: 0.9;
-
   border: none;
   text-align: left;
-
   /*display: block;*/
   display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
 
-  &:hover  .check-box__icon {
-    background-color:  #e5e5e5;
+  &:hover .check-box__icon {
+    background-color: #e5e5e5;
     border: 17px solid #e5e5e5;
   }
 
   &:active .check-box__icon {
-    background-color:  #d5d5d5;
+    background-color: #d5d5d5;
     border: 17px solid #d5d5d5;
   }
 
   &:hover .check-box__input:checked ~ .check-box__icon {
     background-color: #e5e5e5;
-    background-image: url('../img/icon-tick.svg');
+    background-image: url("../img/icon-tick.svg");
   }
+
   &:active .check-box__input:checked ~ .check-box__icon {
     background-color: #d5d5d5;
-    background-image: url('../img/icon-tick-grey.svg');
+    background-image: url("../img/icon-tick-grey.svg");
   }
 }
+
 @media (min-width: @tablet-width) {
   .check-box__label {
     width: 200px;
@@ -70,14 +67,14 @@
   box-sizing: border-box;
   /*order: 1;*/
   border-radius: 7px;
-  background-color:  #f2f2f2;
+  background-color: #f2f2f2;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 21px 21px;
 }
 
 .check-box__input:checked + .check-box__icon {
-  background-image: url('../img/icon-tick.svg');
+  background-image: url("../img/icon-tick.svg");
 }
 
 .check-box__name {

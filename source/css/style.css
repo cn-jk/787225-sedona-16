@@ -277,11 +277,24 @@ body {
   display: block;
   width: 27px;
   height: auto;
+  /*
+    &:hover path {
+      fill: #81b3d2;
+    }
+
+    &:active path {
+      fill: #bfbfbf;
+    }
+
+  */
 }
-.logo-htmlacademy:hover path {
+.logo-htmlacademy:hover {
   fill: #81b3d2;
 }
-.logo-htmlacademy:active path {
+.logo-htmlacademy:active {
+  fill: #bfbfbf;
+}
+.logo-htmlacademy:focus {
   fill: #bfbfbf;
 }
 /* ---- */
